@@ -1,0 +1,5 @@
+packages:
+  - 'architecture'
+  - 'requirements/tests'
+  - 'rps-library'
+  - 'rps-machine-simulator'
