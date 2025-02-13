@@ -6,6 +6,7 @@
   "packageManager": "pnpm@10.3.0",
   "engineStrict": true,
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
