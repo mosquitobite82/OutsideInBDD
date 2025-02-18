@@ -1,5 +1,6 @@
 const text = Object.freeze({
   'and': 'and',
+  'computer': 'computer',
   'RBS Machine Simulator' : 'RBS Machine Simulator',
   'player': 'player',
   'rock': 'rock',
@@ -36,6 +37,9 @@ export const sentenceCased = format('sentence-case');
 export const titleCased = format('title-case');
 
 export const welcomeMessageFor = (playerCount: number) => {
+  if(playerCount === 1){
+    return `${sentenceCased('welcome')} ${sentenceCased('player')} 1 ${lowerCased('and')} ${sentenceCased('computer')}`;
+  }
   const toPlayerName = (_ : never, i: number) => `${sentenceCased('player')} ${i + 1}`;
   const players =
     Array.from({ length: playerCount }, toPlayerName)
