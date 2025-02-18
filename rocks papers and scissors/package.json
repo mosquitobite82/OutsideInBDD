@@ -5,7 +5,8 @@
   "packageManager": "pnpm@10.3.0",
   "engineStrict": true,
   "scripts": {
-    "start": "lerna run start --parallel"
+    "start": "lerna run start --parallel",
+    "test:requirements": "lerna run test:requirements"
   },
   "repository": {
     "type": "git",

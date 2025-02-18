@@ -6,6 +6,7 @@
   "packageManager": "pnpm@10.3.0",
   "engineStrict": true,
   "scripts": {
+    "test:requirements": "cypress open",
     "test": "cypress open"
   },
   "devDependencies": {

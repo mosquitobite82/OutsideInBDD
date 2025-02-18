@@ -1,4 +1,5 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} **/
+
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
@@ -10,6 +11,9 @@ export default {
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
+  setupFiles: [
+
+  ],
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
 
 };

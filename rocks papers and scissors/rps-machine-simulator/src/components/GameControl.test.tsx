@@ -14,7 +14,7 @@ describe('GameControl', () => {
     buttonPressed: mockButtonPressed,
   };
 
-  test('renders buttons with correct names', () => {
+  it('renders buttons with correct names', () => {
     render(<GameControl {...defaultProps} />);
     expect(screen.getByText('ROCK')).toBeInTheDocument();
     expect(screen.getByText('PAPER')).toBeInTheDocument();

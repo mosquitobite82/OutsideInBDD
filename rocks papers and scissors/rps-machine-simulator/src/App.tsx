@@ -1,43 +1,34 @@
-import './App.css'
-import {GameControl, GameControlProps} from "./components/GameControl.tsx";
-
-function App() {
-
+import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
+import { GameControl, GameControlProps } from './components/GameControl.tsx';
+import { Screen } from './screens/Screen.tsx';
+import {noFormat} from "./text/text.ts";
+  
+export function App() {
   const buttonPressed = (output: { value: string; id: string }) => {
     console.log(output);
   };
 
-  const controlA : GameControlProps = {
+  const controlA: GameControlProps = {
     id: 'playerA',
-    buttonPressed
+    buttonPressed,
   };
 
-  const controlB : GameControlProps = {
+  const controlB: GameControlProps = {
     id: 'playerB',
-    buttonPressed
+    buttonPressed,
   };
+  const controls: GameControlProps[] = [controlA, controlB];
 
   return (
-    <div id="main-frame">
-      <header>RBS-Machine Simulator</header>
-
-      <section id="screen">
-
-      </section>
-
-      <section id={"controls"}>
-        <div id="playerA">
-          <header>Player A</header>
-          <GameControl {...controlA} />
-        </div>
-        <div id="playerB">
-          <header>Player B</header>
-          <GameControl {...controlB} />
-        </div>
-      </section>
-
-    </div>
-  )
+    <Router>
+      <div id="main-frame">
+        <header>{noFormat('RBS Machine Simulator')}</header>
+        <Screen />
+        <section id="controls">
+          {controls.map((control) => (<GameControl {...control} key={control.id} />))}
+        </section>
+      </div>
+    </Router>
+  );
 }
-
-export default App

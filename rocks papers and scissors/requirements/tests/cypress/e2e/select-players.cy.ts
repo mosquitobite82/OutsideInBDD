@@ -7,6 +7,7 @@ describe('Scenario: Single Player against the computer', () => {
 
       cy.gotoSelectPlayers();
       cy.selectNumberOfPlayers(1);
+      cy.startGame();
       cy.get(playerList)
         .should('contain', 'Player 1')
         .should('contain', 'Computer');
