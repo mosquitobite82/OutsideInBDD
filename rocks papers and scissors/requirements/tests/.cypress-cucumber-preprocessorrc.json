@@ -1,0 +1,8 @@
+{
+  "e2e": {
+    "stepDefinitions": "cypress/e2e/features/step_definitions/[filepath].{js,mjs,ts,tsx}"
+  },
+  "json": {
+    "enabled": true
+  }
+}

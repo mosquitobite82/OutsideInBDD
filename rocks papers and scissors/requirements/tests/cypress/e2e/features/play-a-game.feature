@@ -10,7 +10,7 @@ Feature: Play a Game
     When the players have left the confirmation of how may players they are
     Then the players shoud get a screen that says "Are you ready?" and a count down of 3 seconds
 
-    Given the ""Are you ready-count down" is done
+    Given the "Are you ready-count down" is done
     And the first round has started
     Then the players should get a a count down screen of "ROCK", "PAPER", "SCISSORS"
 
